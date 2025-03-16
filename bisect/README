@@ -1,0 +1,11 @@
+this program use bisection method to find solution of an equation
+
+steps to solve a problem:
+	1>make a 'problem.h' file
+	2>define a function or function macro using c syntax you can use math.h functions
+	3>define start(def 0), stop(def 1) range
+	4>define iter(def 50 as max number of iteration till solution
+	5>define precesion(def 0)
+	6>run make
+	7>run ./a.out
+
