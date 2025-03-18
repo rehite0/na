@@ -1,0 +1,13 @@
+this program use newton_raphson method to find solution of an equation
+
+steps to solve a problem:
+	1>make a 'problem.h' file
+	2>define a function or function macro using c syntax you can use math.h
+		functions ita prototype must be double f(double x)
+	3>define derivative of f as double df(double)
+	4>define xo(def 0)
+	5>define iter(def 10) as max number of iteration till solution
+	6>define precesion(def 0)
+	7>run make
+	8>run ./a.out
+
