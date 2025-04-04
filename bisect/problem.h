@@ -1,4 +1,4 @@
-//#define start 0
-//#define stop 1
+#define start -3
+#define stop -2
 #define precision 0.000001
-#define f(x) (pow(x,3)-5.0*x+1)
+#define f(x) (pow(x,3)+pow(x,2)+x+7)

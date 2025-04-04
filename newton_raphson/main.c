@@ -4,8 +4,8 @@
 
 double xn,xm;
 #include "problem.h"
-#ifndef x
-	#define xo 0
+#ifndef x0
+	#define x0 0
 #endif
 #ifndef iter
 	#define iter 10
@@ -22,7 +22,7 @@ double xn,xm;
 
 
 int main(){
-	xm=0;xn=xo;
+	xm=0;xn=x0;
 	for(int i=0;i<iter;i++){
 		printf("iteration:%d\nx:%.10lf\tf(x):%lf\n",i,xn,f(xn));
 		xm=xn-(f(xn)/df(xn));
