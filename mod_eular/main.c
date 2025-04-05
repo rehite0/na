@@ -2,15 +2,11 @@
 #include <assert.h>
 #include <math.h>
 
-double x,a,na,f1,f2;
+double x,a,ad,na,fp,fc;
 #include "problem.h"
 #ifndef x0
 	#define x0 0
 #endif
-#ifndef a0
-	#define a0 0
-#endif
-
 #ifndef xn
 	#define xn 1
 #endif
@@ -23,14 +19,15 @@ double x,a,na,f1,f2;
 #endif
 
 int main(){
-	x=x0;a=a0;na=f1=f2=0;
+	x=x0;a=ad=na=fp=fc=0;
 	assert(x<xn &&"invalid input");
-	printf("  x       \t|  approx  \t|  f1      \t|  f2      \n");
+	printf("  x       \t|  approx  \t|  apx.dash\t|  fp      \t|  fc      \n");
 	while(x<=xn){
-		f1=f(a,x);
-		f2=f(a+dx*f1/2.0,x+dx/2.0);
-		na=a+dx*f2;
-		printf("%10lf\t| %10lf\t| %10lf\t| %10lf\n",x,a,f1,f2);
+		fp=f(a,x);
+		ad=a+dx*fp;
+		fc=f(ad,x+dx);
+		na=a+(dx/2.0)*(fp+fc);
+		printf("%10lf\t|%10lf\t|%10lf\t|%10lf\t|%10lf\n",x,a,ad,fp,fc);
 		x+=dx;
 		a=na;
 	}

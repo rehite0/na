@@ -7,6 +7,10 @@ double x,a,na,f1;
 #ifndef x0
 	#define x0 0
 #endif
+#ifndef a0
+	#define a0 0
+#endif
+
 #ifndef xn
 	#define xn 1
 #endif
@@ -19,13 +23,13 @@ double x,a,na,f1;
 #endif
 
 int main(){
-	x=x0;a=na=f1=0;
+	x=x0;a=a0;na=f1=0;
 	assert(x<xn &&"invalid input");
 	printf("  x       \t|  approx  \t|  f1      \n");
 	while(x<=xn){
 		f1=f(a,x);
 		na=a+dx*f1;
-		printf("%10lf\t|%10lf\t|%10lf\n",x,a,f1);
+		printf("%10lf\t| %10lf\t| %10lf\n",x,a,f1);
 		x+=dx;
 		a=na;
 	}
