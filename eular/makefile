@@ -1,3 +1,3 @@
-all: main.c problem.h
+all: main.c ivps/*
 	gcc -lm -g -O3 main.c
 	

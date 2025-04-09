@@ -3,7 +3,7 @@
 #include <math.h>
 
 double x,a,ad,na,fp,fc;
-#include "problem.h"
+#include "ivps/que.h"
 #ifndef x0
 	#define x0 0
 #endif
@@ -25,7 +25,7 @@ int main(){
 	while(x<=xn){
 		fp=f(a,x);
 		ad=a+dx*fp;
-		fc=f(ad,x+dx);
+		fc=f(ad,(x+dx));
 		na=a+(dx/2.0)*(fp+fc);
 		printf("%10lf\t|%10lf\t|%10lf\t|%10lf\t|%10lf\n",x,a,ad,fp,fc);
 		x+=dx;
