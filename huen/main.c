@@ -19,7 +19,7 @@ double x,a,ad,na,fp,fc;
 #endif
 
 int main(){
-	x=x0;a=ad=na=fp=fc=0;
+	x=x0;a=a0;ad=na=fp=fc=0;
 	assert(x<xn &&"invalid input");
 	printf("  x       \t|  approx  \t|  apx.dash\t|  fp      \t|  fc      \n");
 	while(x<=xn){
