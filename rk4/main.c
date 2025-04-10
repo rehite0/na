@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <math.h>
 
-double x,a,na,f1,f2;
+double x,a,na,f1,f2,f3,f4;
 #include "../extras/ivps/que.h"
 #ifndef x0
 	#define x0 0
@@ -23,13 +23,15 @@ double x,a,na,f1,f2;
 #endif
 
 int main(){
-	x=x0;a=a0;na=f1=f2=0;
+	x=x0;a=a0;na=f1=f2=f3=f4=0;
 	assert(x<xn &&"invalid input");
 	printf("  x       \t|  approx  \t|  f1      \t|  f2      \n");
 	while(x<=xn){
-		f1=f(a,x);
+		f1=f( a , x );
 		f2=f( (a+dx*f1/2.0) , (x+dx/2.0) );
-		na=a+dx*f2;
+		f3=f( (a+dx*f2/2.0) , (x+dx/2.0) );
+		f4=f( (a+dx*f3) , (x+dx) );
+		na=a+(dx/6)*(f1+2*f2+2*f3+f4);
 		printf("%10lf\t| %10lf\t| %10lf\t| %10lf\n",x,a,f1,f2);
 		x+=dx;
 		a=na;

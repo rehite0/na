@@ -3,7 +3,7 @@
 #include <math.h>
 
 double x,a,na,f1;
-#include "ivps/que.h"
+#include "../extras/ivps/que.h"
 #ifndef x0
 	#define x0 0
 #endif
