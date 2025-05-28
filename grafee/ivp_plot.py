@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 import matplotlib.pyplot as plt
 import subprocess as sp
 
 def main():
-    l=("eular","huen","rk2","rk4")
+    l=("eular","huen","modec","rk4")
     for i in l:
         dir=f"../{i}/"
         sp.run("pushd "+dir+"&& make && popd",shell=True,stdout=sp.DEVNULL)
